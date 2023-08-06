@@ -1,0 +1,71 @@
+body {
+    background-color: #f7ecde;
+}
+h4{
+display: inline;
+}
+
+.title{
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+}
+.title::before{
+    content:"";
+    position: absolute;
+    top:60%;
+    right:0;
+    left:0;
+    bottom:10%;
+    background-color: #fec260;
+    z-index: -1;
+    transition: all 1s;
+}
+
+
+
+.title:hover::before{
+    top:30%;
+    
+}
+
+.inputs{
+    margin-top:40px;
+    padding: 20px;
+    border-top:1px dashed black;
+    border-bottom:1px dashed black;
+}
+
+.caption h2{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rules{
+    background: #a1a1a192;
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules .rules-content{
+    background-color: #ffffff;
+    width: 70%;
+    padding:20px;
+    border-radius: 15px;
+    
+}
+
+@media (max-width: 900px){
+    .rules .rules-content{
+        width: 92%;
+        font-size: 0.9rem;
+    }
+}

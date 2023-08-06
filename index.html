@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote generation</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font for Quote text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet"></head>
+<body>
+
+    <div class="container">
+        <div class="container text-center mt-4">
+            <h1 class="title position-relative fw-medium  d-inline">
+                Bookmarker
+            </h1>
+        </div>
+        <div class="inputs">
+            <div class="caption py-2 text-center">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+
+                </h2>
+            </div>
+            <label for="siteName" class="">
+                <i class="fa-solid fa-book-bookmark p-2"></i>
+            <h4>Site Name</h4>    
+            </label>
+            <input oninput="checkName(this.value)" id="siteName" class="form-control py-2"  type="text" placeholder="Bookmark Name">
+                
+            <label for="siteUrl">
+                <i class="fa-solid fa-link p-2"></i>
+            <h4>Site Url</h4>    
+            </label>
+            <input oninput="urlValidation(this.value)" id="siteUrl" class="form-control py-2"  type="text" placeholder="Site Url">
+            <button class="btn btn-danger py-2 mx-auto my-4" id="submitBtn">
+                    Submit
+                </button>
+        </div>
+            <!-- Bookmarks table  -->
+            <div class="container text-center">
+            <table  class="table mt-5 p-5">
+                <thead>
+                    <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Visit</th>
+                    <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="cont">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="urlValidation" class="rules d-none">
+        <div class="rules-content">
+            <h3 class="text-danger">Rules for writing a valid url</h3>
+            <ol class="text-muted"> 
+                <li>Start with the protocol: Include "http://" or "https://" at the beginning.</li> <li>Use a descriptive domain: Choose a clear and meaningful domain name.</li>
+                <li>Add specific path: Include a concise path to the desired resource.</li> <li>Separate directories with slashes: Use "/" to separate directories in the path.</li>
+                <li>Encode special characters: Replace spaces and non-alphanumeric characters.</li> <li>Mind lowercase or uppercase: Be consistent with letter case in URLs.</li>
+                <li>Keep it simple: Avoid unnecessary complexity in URLs.</li>
+                <li>Be clear and meaningful: Create URLs that accurately represent the content.</li> 
+            </ol>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
